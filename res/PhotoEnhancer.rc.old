@@ -1,0 +1,585 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_BTNREFAZER          BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_BTNREFAZER TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_BTN_DESFAZER
+    BUTTON      ID_BTN_REFAZER
+    SEPARATOR
+    BUTTON      ID_BTNMAISZOOM
+    BUTTON      ID_BTNZOOMN
+    BUTTON      ID_BTNMENOSZOOM
+    SEPARATOR
+    BUTTON      ID_BUTTON32800
+    BUTTON      ID_BUTTON32801
+    BUTTON      ID_BUTTON32802
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Arquivo"
+    BEGIN
+        MENUITEM "&Abrir...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "C&onfigurar Impressora...",   ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Arquivos Recentes",           ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Fechar Documento",           ID_FILE_CLOSE
+        MENUITEM "S&air",                       ID_APP_EXIT
+    END
+    POPUP "&Exibir"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Informações"
+    BEGIN
+        MENUITEM "&Sobre PhotoEnhancer...",     ID_APP_ABOUT
+    END
+END
+
+IDR_PhotoEnhancerTYPE MENU 
+BEGIN
+    POPUP "&Arquivo"
+    BEGIN
+        MENUITEM "&Abrir...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "&Fechar Documento",           ID_FILE_CLOSE
+        MENUITEM "&Salvar\tCtrl+S",             ID_FILE_SAVE
+        MENUITEM "Salvar &Como...",             ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Imprimir...\tCtrl+P",        ID_FILE_PRINT
+        MENUITEM "Visualizar Impre&ssão",       ID_FILE_PRINT_PREVIEW
+        MENUITEM "Configurar Impressão...",     ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Arquivos Recentes",           ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Sa&ir",                       ID_APP_EXIT
+    END
+    POPUP "&Editar"
+    BEGIN
+        MENUITEM "&Desfazer            \tCtrl+Z", ID_EDIT_UNDO
+        MENUITEM "Refazer                   \tCtrl+R", ID_EDITAR_REFAZER
+        MENUITEM SEPARATOR
+        MENUITEM "Recor&tar\tCtrl+X",           ID_EDIT_CUT
+        MENUITEM "&Copiar\tCtrl+C",             ID_EDIT_COPY
+        MENUITEM "Co&lartCtrl+V",               ID_EDIT_PASTE
+    END
+    POPUP "&Visualizar"
+    BEGIN
+        MENUITEM "&Toolbar              ",      ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "Imagem"
+    BEGIN
+        MENUITEM "Espelhamento Horizontal",     ID_IMAGEM_ESPELHAMENTO
+        MENUITEM "Espelhamento Vertical",       ID_IMAGEM_ESPELHAMENTOVERTICAL
+
+        MENUITEM "Negativo",                    ID_IMAGEM_NEGATIVO
+        MENUITEM SEPARATOR
+        MENUITEM "Reamostrar",                  ID_IMAGEM_REAMOSTRAR
+        MENUITEM "Incrementar Bpp",             ID_IMAGEM_INCREMENTARBPP
+        MENUITEM "Decrementar Bpp",             ID_IMAGEM_DECREMENTARBPP
+        MENUITEM "Escala de Cinza (Y)",         ID_IMAGEM_YUV
+        MENUITEM "Histograma",                  ID_IMAGEM_HISTOGRAMA
+        MENUITEM SEPARATOR
+        MENUITEM "Propriedades da Imagem",      ID_IMAGEM_PROPRIEDADESDAIMAGEM
+
+    END
+    POPUP "Filtros"
+    BEGIN
+        MENUITEM "Limiarizar                                ", 
+                                                ID_FILTROS_LINERIZAR
+        MENUITEM "Colorizar",                   ID_FILTROS_COLORIZAR
+        MENUITEM "Gamma",                       ID_FILTROS_GAMMA
+        MENUITEM SEPARATOR
+        MENUITEM "Clarear",                     ID_FILTROS_CLAREAR
+        MENUITEM "Escurecer",                   ID_FILTROS_ESCURECER
+        MENUITEM "Mais Contraste",              ID_FILTROS_MAISCONTRASTE
+        MENUITEM "Menos Contraste",             ID_FILTROS_MENOSCONTRASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Adicionar Ruido Gaussiano",   ID_FILTROS_ADICIONARUIDO
+        MENUITEM "Mediana",                     ID_FILTROS_PASSABAIXA
+        MENUITEM "Passa Alta",                  ID_FILTROS_PASSAALTA
+        MENUITEM "Filtro Personalizado",        ID_FILTROS_FILTROPERSONALIZADO
+
+        MENUITEM SEPARATOR
+        MENUITEM "Laplaciano Omnidirecional",   ID_FILTROS_LAPLACIANO
+        MENUITEM "Combinar",                    ID_FILTROS_COMBINAR
+    END
+    POPUP "&Janelas"
+    BEGIN
+        MENUITEM "&Nova Janela",                ID_WINDOW_NEW
+        MENUITEM "&Cascata",                    ID_WINDOW_CASCADE
+        MENUITEM "&Lado a Lado",                ID_WINDOW_TILE_HORZ
+        MENUITEM "&Ordenar Icones",             ID_WINDOW_ARRANGE
+    END
+    POPUP "&Informações"
+    BEGIN
+        MENUITEM "&Sobre PhotoEnhancer...",     ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 217, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Sobre PhotoEnhancer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "PhotoEnhancer Protótipo 1.1",IDC_STATIC,76,79,96,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,88,91,65,8
+    DEFPUSHBUTTON   "OK",IDOK,161,103,50,13,WS_GROUP
+    CONTROL         "Densenvolvido por: Arlete Aparecida, Júlio C. Brito",
+                    IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,44,6,
+                    166,12,WS_EX_STATICEDGE
+    LTEXT           "Coordenado por: Luis Eduardo da Silva",IDC_STATIC,44,23,
+                    166,12,0,WS_EX_STATICEDGE
+    ICON            IDR_MAINFRAME,IDC_STATIC,9,13,21,20
+    LTEXT           "PCC - Fevereiro de 2005",IDC_STATIC,44,40,166,12,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Ciência da Computação 8º Período",IDC_STATIC,44,58,166,
+                    12,0,WS_EX_STATICEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "PhotoEnhancer.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "PhotoEnhancer.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 216
+        BOTTOMMARGIN, 116
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "PhotoEnhancer"
+    IDR_PhotoEnhancerTYPE   "\nPhotoEnhancer\nPhotoEnhancer\n\n\nPhotoEnhancer.Document\nPhotoEnhancer.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "PhotoEnhancer"
+    AFX_IDS_IDLEMESSAGE     "Pronto"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Abre um documento existente\nOpen"
+    ID_FILE_CLOSE           "Fecha um documento ativo\nClose"
+    ID_FILE_SAVE            "Salva um documento ativo\nSave"
+    ID_FILE_SAVE_AS         "Salva um documento ativo com um novo nome\nSave As"
+    ID_FILE_PAGE_SETUP      "Muda as opções de impressão\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Muda a impressora e as opções de impressão\nPrint Setup"
+    ID_FILE_PRINT           "Imprime o ducumento ativo\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Mostra informações do programa, número de versão e copyright\nAbout"
+    ID_APP_EXIT             "sai da aplicação\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Abre este documento"
+    ID_FILE_MRU_FILE2       "Abre este documento"
+    ID_FILE_MRU_FILE3       "Abre este documento"
+    ID_FILE_MRU_FILE4       "Abre este documento"
+    ID_FILE_MRU_FILE5       "Abre este documento"
+    ID_FILE_MRU_FILE6       "Abre este documento"
+    ID_FILE_MRU_FILE7       "Sai da aplicação\nExit"
+    ID_FILE_MRU_FILE8       "Abre este documento"
+    ID_FILE_MRU_FILE9       "Abre este documento"
+    ID_FILE_MRU_FILE10      "Abre este documento"
+    ID_FILE_MRU_FILE11      "Abre este documento"
+    ID_FILE_MRU_FILE12      "Abre este documento"
+    ID_FILE_MRU_FILE13      "Abre este documento"
+    ID_FILE_MRU_FILE14      "Abre este documento"
+    ID_FILE_MRU_FILE15      "Abre este documento"
+    ID_FILE_MRU_FILE16      "Abre este documento"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Muda para a próxima janela\nNext Pane"
+    ID_PREV_PANE            "Muda para a janela anterior\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Abre outra janela para o documento ativo\nNew Window"
+    ID_WINDOW_ARRANGE       "Organiza os ícones na parte inferior da janela\nArrange Icons"
+    ID_WINDOW_CASCADE       "Organiza as janelas em cascata\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Reparte a janela ativa em paineis\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Apaga a seleção\nErase"
+    ID_EDIT_CLEAR_ALL       "Apaga qualquer coisa\nErase All"
+    ID_EDIT_COPY            "Copia a seleção e a coloca na área de transferência\nCopy"
+    ID_EDIT_CUT             "Corta a seleção e a coloca na área de transferência\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insere componentes guardados na área de transferência\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Desfaz a última ação\nUndo"
+    ID_EDIT_REDO            "Refaz uma operação desfeita anteriormente\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_STBBPP               "Alt x Larg x Prof"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Brazil) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP                  "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLGLINERIZAR DIALOGEX 0, 0, 141, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+CAPTION "Limiarizar"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,84,26,50,14
+    LTEXT           "Nivel (0..255)",IDC_STATIC,29,9,45,8
+    EDITTEXT        IDC_EDT_LINERIZAR,25,23,49,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_CLIENTEDGE
+END
+
+IDD_RUIDODLG DIALOGEX 0, 0, 146, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Adicionar Ruído - Quantidade > 0"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,89,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,89,24,50,14
+    EDITTEXT        IDC_EDIT1,21,20,51,14,ES_AUTOHSCROLL
+    LTEXT           "Quantidade:",IDC_STATIC,28,10,41,8
+END
+
+IDD_FPERDLG DIALOGEX 0, 0, 210, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Filtro Personalizado"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,153,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,153,24,50,14
+    EDITTEXT        IDC_EDIT1,7,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,56,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,106,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,7,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,56,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,105,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,7,53,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,56,53,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,105,53,40,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLGLINERIZAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_RUIDODLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 139
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_FPERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\PhotoEnhancer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Cópia de CORES005.ICO"
+IDR_PhotoEnhancerTYPE   ICON                    "res\\IExplorer0010.ico"
+#endif    // Portuguese (Brazil) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\PhotoEnhancer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
